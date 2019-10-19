@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import HelpseekerStep1 from './components/HelpseekerStep1';
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
 //
@@ -43,6 +43,7 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+            <HelpseekerStep1 />
           </Route>
           <Route path="/about">
             <About />
