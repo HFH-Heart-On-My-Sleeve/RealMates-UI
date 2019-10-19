@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import SeekingHelp from './components/seeking-help';
-import FilterOptions from './components/filterOption';
+import { FilterGrid } from './components/filter-options';
 
 import './App.scss';
 
@@ -47,7 +47,7 @@ function About() {
   return (
     <div>
       <h2>About</h2>
-      <FilterOptions />
+      <FilterGrid />
     </div>
   );
 }
