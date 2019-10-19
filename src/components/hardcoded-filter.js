@@ -15,7 +15,7 @@ export const filterOptions = [{
     ]
   },
   {
-    title: "feelings",
+    title: "Feelings",
     options: [{
         label: "Angry",
         value: "angry"
@@ -31,7 +31,7 @@ export const filterOptions = [{
     ]
   },
   {
-    title: "situations",
+    title: "Situations",
     options: [{
         label: "Coming out of closet",
         value: "comingout"
