@@ -20,10 +20,7 @@ const HelpSeekerForm = () => {
     case 2:
       return <SecondPage onClick={saveSelected} />;
     default:
-      return <ThirdPage onClick={(selected) => {
-        saveSelected(selected);
-        console.log(formSelection);
-      }} />;
+      return <ThirdPage onClick={(selected) => console.log({...formSelection, ...selected})} />;
   }
 };
 
