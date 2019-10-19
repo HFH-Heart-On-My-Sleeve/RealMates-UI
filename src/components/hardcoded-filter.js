@@ -1,6 +1,4 @@
-import React from 'react';
-
-let filterOptions = [{
+export const filterOptions = [{
     title: "Mental Health Condition",
     options: [{
         label: "Bipolar",
