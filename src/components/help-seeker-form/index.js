@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormQuestionLayout from '../form-question-layout';
-import { FilterGrid } from '../filter-options';
+import { FilterGrid, FilterDropdown } from '../filter-options';
+import {countries} from '../../db/hardcoded-country';
 
 import './index.scss';
 
@@ -18,7 +19,7 @@ const HelpSeekerForm = () => {
           </FormQuestionLayout>
 
           <FormQuestionLayout title="I am going to ask you another question?">
-            <FilterGrid />
+            <FilterDropdown options={countries} />
           </FormQuestionLayout>
 
           <FormQuestionLayout title="MOAR QUESTIONS!!!!">
@@ -43,7 +44,7 @@ const HelpSeekerForm = () => {
           </FormQuestionLayout>
 
           <FormQuestionLayout title="MOAR QUESTIONS!!!!">
-            <FilterGrid />
+            <FilterDropdown options={countries} />
           </FormQuestionLayout>
 
           <button
