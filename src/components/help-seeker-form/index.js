@@ -18,19 +18,7 @@ const HelpSeekerForm = () => {
     case 1:
       return <SeekingHelp onClick={saveSelected} />;
     case 2:
-      return (
-        <React.Fragment>
-          <h2>Who would you like to talk to?</h2>
-
-          <FilterGrid title="Someone who has experience with..." options={filterValues.mentalIllnesses} />
-          <FilterGrid title="Understands feeling..." options={filterValues.feelings} />
-          <FilterGrid title="Has experienced situations like..." options={filterValues.situations}/>
-
-          <button
-            className="help-seeker-form__submit"
-            onClick={() => setCurrentStep(currentStep + 1)}>CONTINUE</button>
-        </React.Fragment>
-      );
+      return <SecondPage onClick={saveSelected} />;
     default:
       return (
         <React.Fragment>
@@ -43,6 +31,35 @@ const HelpSeekerForm = () => {
         </React.Fragment>
       )
   }
+};
+
+const SecondPage = ({ onClick }) => {
+  const [selected, setSelected] = useState({});
+  const updateSelected = (newKey, option) => {
+      if (selected.hasOwnProperty(newKey)) {
+        const newValue = { [newKey]: [...selected[newKey], option] }
+        setSelected(...selected, ...newValue)
+      } else {
+        const newValue = { [newKey]: [ option] }
+        setSelected(...selected, ...newValue)
+      }
+  };
+
+  return (
+    <React.Fragment>
+      <h2>Who would you like to talk to?</h2>
+
+      <FilterGrid onChangeKey="experience" onChange={updateSelected} title="Someone who has experience with..." options={filterValues.mentalIllnesses} />
+      <FilterGrid onChangeKey="feelings" onChange={updateSelected} title="Understands feeling..." options={filterValues.feelings} />
+      <FilterGrid onChangeKey="situations" onChange={updateSelected} title="Has experienced situations like..." options={filterValues.situations}/>
+
+      <p>{JSON.stringify(selected)}</p>
+
+      <button
+        className="help-seeker-form__submit"
+        onClick={() => onClick(selected)}>CONTINUE</button>
+    </React.Fragment>
+  );
 };
 
 export default HelpSeekerForm;

@@ -1,15 +1,7 @@
 import React from 'react';
-import {useState} from 'react';
-
 import './FilterGrid.scss';
 
-const FilterGrid = ({ title, options }) => {
-  const [step2, setStep2] = useState({});
-  const handleEvent = (e, value) =>{
-    setStep2({...step2, [value]: e.target.checked})
-  }
-
-  return(
+const FilterGrid = ({ title, options, onChange, onChangeKey }) => (
       <div className="filter-options">
         <h4 className="filter-options__title" htmlFor="filter-options">{title}</h4>
         <div id="filter-options" className="filter-options__options">
@@ -23,7 +15,7 @@ const FilterGrid = ({ title, options }) => {
                     value={option.value}
                     id={option.label}
                     name={option.label}
-                    onChange={(e) => {handleEvent(e, option.value)}}>
+                    onChange={() => onChange(onChangeKey, option)}>
                   </input>
                   <label htmlFor={option.label} className="filter-options__label">
                     {option.label}
@@ -34,6 +26,6 @@ const FilterGrid = ({ title, options }) => {
           }
       </div>
     </div>
-  )};
+  );
 
 export default FilterGrid;
