@@ -5,7 +5,6 @@ import {
   Route
 } from "react-router-dom";
 
-import SeekingHelp from './components/seeking-help';
 import HelpSeekerForm from './components/help-seeker-form';
 
 import './App.scss';
@@ -28,9 +27,6 @@ export default function App() {
         <div className="app-content__constraint">
           <Switch>
             <Route exact path="/">
-              <SeekingHelp />
-            </Route>
-            <Route path="/help-seeker">
               <HelpSeekerForm />
             </Route>
             <Route path="/dashboard">
