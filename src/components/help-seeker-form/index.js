@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import  { useHistory } from 'react-router-dom';
 import SeekingHelp from '../seeking-help';
 import { FilterGrid, FilterDropdown } from '../filter-options';
 import * as filterValues from '../../db';
@@ -52,6 +53,7 @@ const SecondPage = ({ onClick }) => {
 };
 
 const ThirdPage = ({ onClick }) => {
+  const history = useHistory();
   const [selected, setSelected] = useState({});
   const updateSelected = (newKey, option) => {
       if (selected.hasOwnProperty(newKey)) {
@@ -70,7 +72,10 @@ const ThirdPage = ({ onClick }) => {
 
       <button
         className="help-seeker-form__submit"
-        onClick={() => onClick(selected)}>SUBMIT</button>
+        onClick={() => {
+          onClick(selected);
+          history.push("/dashboard");
+        }}>SUBMIT</button>
     </React.Fragment>
   );
 }
