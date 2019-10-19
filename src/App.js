@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import SeekingHelp from './components/seeking-help';
-import { FilterGrid } from './components/filter-options';
+import HelpSeekerForm from './components/help-seeker-form';
 
 import './App.scss';
 
@@ -30,8 +30,8 @@ export default function App() {
             <Route exact path="/">
               <SeekingHelp />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/help-seeker">
+              <HelpSeekerForm />
             </Route>
             <Route path="/dashboard">
               <Dashboard />
@@ -40,15 +40,6 @@ export default function App() {
         </div>
       </div>
     </Router>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-      <FilterGrid />
-    </div>
   );
 }
 
