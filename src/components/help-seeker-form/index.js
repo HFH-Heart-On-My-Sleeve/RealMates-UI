@@ -9,9 +9,14 @@ const HelpSeekerForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formSelection, setFormSelection] = useState({step1: [], step2: [], step3: []});
 
+  const saveSelected = (formPayload) => {
+    setFormSelection({ ...formSelection, ...formPayload });
+    setCurrentStep(currentStep + 1);
+  }
+
   switch (currentStep) {
     case 1:
-      return <SeekingHelp onClick={() => setCurrentStep(currentStep + 1)} />;
+      return <SeekingHelp onClick={saveSelected} />;
     case 2:
       return (
         <React.Fragment>
