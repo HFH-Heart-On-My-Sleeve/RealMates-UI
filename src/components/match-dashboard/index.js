@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import MatchCard from './MatchCard';
 import { FilterDropdown } from '../filter-options';
@@ -37,6 +38,13 @@ const MatchDashboard = () => (
             <FilterDropdown title="Country" options={filterValues.countries} onChange={() => {}} onChangeKey="" />
           </div>
         </div>
+
+        <Link
+          className="match-dashbboard__update"
+          to="/"
+        >
+          UPDATE FILTERS
+        </Link>
       </div>
       <div className="match-dashbboard__matches">
         <MatchCard

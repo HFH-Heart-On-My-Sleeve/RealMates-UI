@@ -39,6 +39,23 @@
     }
   }
 
+  &__update {
+    background: transparent;
+    border: 1px solid #010101;
+    padding: 16px;
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+    color: black;
+    margin-top: 24px;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      background: $pink;
+    }
+  }
+
   &__matches {
     flex: 5;
     display: flex;
