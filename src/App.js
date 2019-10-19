@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import HelpSeekerForm from './components/help-seeker-form';
+import MatchDashboard from './components/match-dashboard';
 
 import './App.scss';
 
@@ -30,19 +31,11 @@ export default function App() {
               <HelpSeekerForm />
             </Route>
             <Route path="/dashboard">
-              <Dashboard />
+              <MatchDashboard />
             </Route>
           </Switch>
         </div>
       </div>
     </Router>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }

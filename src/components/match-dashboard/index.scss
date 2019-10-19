@@ -1,0 +1,38 @@
+.match-dashbboard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__availability {
+    width: 100%;
+    height: 100%;
+    background: pink;
+  }
+
+  &__date-time {
+
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__filters {
+    flex: 2;
+    margin: 16px 16px 0 0;
+    background: blue;
+  }
+
+  &__matches {
+    flex: 5;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    p {
+      width: 336px;
+      background: yellow;
+    }
+  }
+}
