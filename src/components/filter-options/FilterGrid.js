@@ -1,5 +1,4 @@
 import React from 'react';
-import { filterOptions } from '../../db/hardcoded-filter';
 import {useState} from 'react';
 
 import './FilterGrid.scss';
@@ -37,6 +36,4 @@ const FilterGrid = ({ title, options }) => {
     </div>
   )};
 
-const FilterGrids = () => filterOptions.map((option, index) => <FilterGrid key={index} {...option} />);
-
-export default FilterGrids;
+export default FilterGrid;
