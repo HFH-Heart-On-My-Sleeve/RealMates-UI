@@ -1,22 +1,15 @@
 import React from 'react';
-import {useState} from 'react';
 import Select from 'react-select'
 
-const FilterDropdown = ({ title, options }) => {
-  const [dropdownState, setDropdownState] = useState({});
-  const handleEvent = (e) => {
-    setDropdownState({country: e.value})
-  }
-
-  return(
+const FilterDropdown = ({ title, options, onChange, onChangeKey }) => (
     <div>
       <h4>{title}</h4>
       <Select
         options={options}
         placeholder="Select from below"
-        onChange={(e)=>{handleEvent(e)}}
+        onChange={(selected) => onChange(onChangeKey, selected)}
         />
     </div>
-  )};
+  );
 
 export default FilterDropdown;

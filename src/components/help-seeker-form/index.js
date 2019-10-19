@@ -20,16 +20,10 @@ const HelpSeekerForm = () => {
     case 2:
       return <SecondPage onClick={saveSelected} />;
     default:
-      return (
-        <React.Fragment>
-          <h2>Who would you like to talk to?</h2>
-          <FilterDropdown title="Someone who has been to..." options={filterValues.countries} />
-
-          <button
-            className="help-seeker-form__submit"
-            onClick={() => console.log(formSelection)}>SUBMIT</button>
-        </React.Fragment>
-      )
+      return <ThirdPage onClick={(selected) => {
+        saveSelected(selected);
+        console.log(formSelection);
+      }} />;
   }
 };
 
@@ -38,10 +32,10 @@ const SecondPage = ({ onClick }) => {
   const updateSelected = (newKey, option) => {
       if (selected.hasOwnProperty(newKey)) {
         const newValue = { [newKey]: [...selected[newKey], option] }
-        setSelected(...selected, ...newValue)
+        setSelected({...selected, ...newValue})
       } else {
         const newValue = { [newKey]: [ option] }
-        setSelected(...selected, ...newValue)
+        setSelected({...selected, ...newValue})
       }
   };
 
@@ -61,5 +55,29 @@ const SecondPage = ({ onClick }) => {
     </React.Fragment>
   );
 };
+
+const ThirdPage = ({ onClick }) => {
+  const [selected, setSelected] = useState({});
+  const updateSelected = (newKey, option) => {
+      if (selected.hasOwnProperty(newKey)) {
+        const newValue = { [newKey]: [...selected[newKey], option] }
+        setSelected({...selected, ...newValue})
+      } else {
+        const newValue = { [newKey]: [ option] }
+        setSelected({...selected, ...newValue})
+      }
+  };
+
+  return (
+    <React.Fragment>
+      <h2>Who would you like to talk to?</h2>
+      <FilterDropdown onChangeKey="country" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
+
+      <button
+        className="help-seeker-form__submit"
+        onClick={() => onClick(selected)}>SUBMIT</button>
+    </React.Fragment>
+  );
+}
 
 export default HelpSeekerForm;
