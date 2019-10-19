@@ -21,8 +21,6 @@ import './App.scss';
 // work properly.
 
 export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <Router>
       <div className="app-nav">
@@ -33,13 +31,8 @@ export default function App() {
             alt="Heart On My Sleeve Logo"
             width="250px"
           />
-          <Link onClick={() => setMenuOpen(!menuOpen)}>Menu</Link>
+          <p onClick={() => alert('Yay you found me! <3')}>Login</p>
         </div>
-      </div>
-      <div className={`app-nav__overflow${menuOpen ? '' : '--hidden'}`}>
-        <Link className="app-nav__overflow-link" to="/">Home</Link>
-        <Link className="app-nav__overflow-link" to="/about">About</Link>
-        <Link className="app-nav__overflow-link" to="/dashbboard">Dashboard</Link>
       </div>
       <div className="app-content__wrapper">
         <div className="app-content__constraint">
