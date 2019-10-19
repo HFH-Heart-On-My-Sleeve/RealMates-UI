@@ -1,3 +1,4 @@
-import FilterGrid from './FilterGrid'
+import FilterGrid from './FilterGrid';
+import FilterDropdown from './FilterDropdown';
 
-export {FilterGrid};
+export {FilterGrid ,FilterDropdown};

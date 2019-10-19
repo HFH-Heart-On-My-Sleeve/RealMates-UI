@@ -1,10 +1,10 @@
 import React from 'react';
-import { filterOptions } from '../hardcoded-filter';
+import { filterOptions } from '../../db/hardcoded-filter';
 import {useState} from 'react';
 
-const FilterOption = ({ title, options }) => {
+const FilterGrid = ({ title, options }) => {
   const [step2, setStep2] = useState({});
-  const handleEvent = async (e, value, title) =>{
+  const handleEvent = (e, value) =>{
     setStep2({...step2, [value]: e.target.checked})
   }
 
@@ -23,7 +23,7 @@ const FilterOption = ({ title, options }) => {
                     type="checkbox"
                     value={option.value}
                     id={option.label}
-                    onChange={(e) => {handleEvent(e, option.value, title)}}>
+                    onChange={(e) => {handleEvent(e, option.value)}}>
                   </input>
                 </div>
               )
@@ -33,6 +33,6 @@ const FilterOption = ({ title, options }) => {
     </div>
   )};
 
-const FilterOptions = () => filterOptions.map((option, index) => <FilterOption key={index} {...option} />);
+const FilterGrids = () => filterOptions.map((option, index) => <FilterGrid key={index} {...option} />);
 
-export default FilterOptions;
+export default FilterGrids;
