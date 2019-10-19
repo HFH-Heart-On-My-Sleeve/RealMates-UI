@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.help-seeker-form {
+  &__submit {
+    background: transparent;
+    border: 1px solid $black;
+    padding: 16px;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+// ipads onwards
+@media (min-width: 1000px) {
+  .help-seeker-form {
+    &__submit {
+      width: 480px;
+    }
+  }
+}
