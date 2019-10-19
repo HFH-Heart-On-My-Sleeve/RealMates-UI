@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .match-dashbboard {
   width: 100%;
   display: flex;
@@ -29,10 +31,42 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
 
-    p {
-      width: 336px;
-      background: yellow;
+  &__match {
+    width: 308px;
+    background: yellow;
+    margin: 16px 0;
+    padding: 16px;
+
+    &-avatar {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    &-image {
+      height: 100%;
+    }
+
+    &-filters {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    &-filter {
+      padding: 4px;
+      background: $black;
+      color: $white;
+      margin: 4px 8px 4px 0;
     }
   }
 }
