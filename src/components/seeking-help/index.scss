@@ -1,12 +1,12 @@
 @import '../../variables.scss';
 
 .seeking-help {
-  &__links {
+  &__buttons {
     display: flex;
     flex-direction: column;
   }
 
-  &__link {
+  &__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +17,8 @@
     border: 1px solid $pink;
     text-decoration: none;
     color: $black;
+    font-size: inherit;
+    font-family: inherit;
 
     &:hover {
       border: 1px solid $black;
@@ -25,18 +27,18 @@
 
   // ipads onwards
   @media (min-width: 761px) {
-    &__links {
+    &__buttons {
       flex-direction: row;
       justify-content: space-around;
     }
 
-    &__link {
+    &__button {
       width: 336px;
     }
   }
 
   @media (min-width: 1000px) {
-    &__link {
+    &__button {
       width: 480px;
     }
   }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormQuestionLayout from '../form-question-layout';
+import SeekingHelp from '../seeking-help';
 import { FilterGrid, FilterDropdown } from '../filter-options';
 import * as filterValues from '../../db';
 
@@ -11,6 +11,8 @@ const HelpSeekerForm = () => {
 
   switch (currentStep) {
     case 1:
+      return <SeekingHelp onClick={() => setCurrentStep(currentStep + 1)} />;
+    case 2:
       return (
         <React.Fragment>
           <h2>Who would you like to talk to?</h2>
