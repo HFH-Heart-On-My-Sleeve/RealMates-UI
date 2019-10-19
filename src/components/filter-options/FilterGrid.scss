@@ -1,0 +1,35 @@
+@import '../../variables.scss';
+
+.filter-options {
+  &__title {
+  }
+
+  &__options {
+    display: flex;
+    margin: 16px 0;
+  }
+
+  &__option {
+  }
+
+  &__label {
+    display: inline-block;
+    position: relative;
+    margin-right: 16px;
+    padding: 8px;
+    cursor: pointer;
+    background: #ffecec;
+    color: $black;
+    border: 1px solid #ffecec;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__label {
+    background: $black;
+    border: 1px solid $black;
+    color: $white;
+  }
+}
