@@ -20,10 +20,23 @@
     display: flex;
   }
 
-  &__filters {
+  &__filters-wrapper {
     flex: 2;
     margin: 16px 16px 0 0;
-    background: blue;
+    max-width: 272px;
+  }
+
+  &__filter-group {
+    padding: 16px;
+    border: 1px solid black;
+
+    h5 {
+      margin-top: 0;
+    }
+
+    &:first-of-type {
+      border-bottom: none;
+    }
   }
 
   &__matches {
@@ -34,7 +47,7 @@
   }
 
   &__match {
-    width: 308px;
+    width: 292px;
     background: $white;
     margin: 16px 0;
     padding: 16px;

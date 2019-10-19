@@ -1,6 +1,8 @@
 import React from 'react';
 
 import MatchCard from './MatchCard';
+import { FilterDropdown } from '../filter-options';
+import * as filterValues from '../../db';
 
 import './index.scss';
 
@@ -14,7 +16,28 @@ const MatchDashboard = () => (
       </div>
     </div>
     <div className="match-dashbboard__content">
-      <div className="match-dashbboard__filters">Sidebar</div>
+      <div className="match-dashbboard__filters-wrapper">
+        <h2>My filters</h2>
+        <p>I'm seeking help for <strong>myself</strong>, and I want to talk to someone who: </p>
+
+        <div className="match-dashbboard__filters">
+          <div className="match-dashbboard__filter-group">
+            <h5>Has these experiences:</h5>
+            <FilterDropdown title="Mental health ilness" options={filterValues.mentalIllnesses} onChange={() => {}} onChangeKey="" multi={true} />
+            <FilterDropdown title="Feelings" options={filterValues.feelings} onChange={() => {}} onChangeKey="" multi={true} />
+            <FilterDropdown title="Situations" options={filterValues.situations} onChange={() => {}} onChangeKey="" multi={true} />
+            <FilterDropdown title="Country" options={filterValues.countries} onChange={() => {}} onChangeKey="" />
+          </div>
+
+          <div className="match-dashbboard__filter-group">
+            <h5>Has these qualities:</h5>
+            <FilterDropdown title="Mental health ilness" options={filterValues.mentalIllnesses} onChange={() => {}} onChangeKey="" multi={true} />
+            <FilterDropdown title="Feelings" options={filterValues.feelings} onChange={() => {}} onChangeKey="" multi={true} />
+            <FilterDropdown title="Situations" options={filterValues.situations} onChange={() => {}} onChangeKey="" multi={true} />
+            <FilterDropdown title="Country" options={filterValues.countries} onChange={() => {}} onChangeKey="" />
+          </div>
+        </div>
+      </div>
       <div className="match-dashbboard__matches">
         <MatchCard
           name="Matt"
