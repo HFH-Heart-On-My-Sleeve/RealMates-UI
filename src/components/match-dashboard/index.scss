@@ -35,9 +35,10 @@
 
   &__match {
     width: 308px;
-    background: yellow;
+    background: $white;
     margin: 16px 0;
     padding: 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0.0625rem 0.1875rem 0px;
 
     &-avatar {
       position: relative;
