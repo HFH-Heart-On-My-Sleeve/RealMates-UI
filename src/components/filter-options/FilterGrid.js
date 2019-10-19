@@ -11,7 +11,7 @@ const FilterGrid = ({ title, options }) => {
 
   return(
       <div className="filter-options">
-        <label className="filter-options__title" htmlFor="filter-options">{title}</label>
+        <h4 className="filter-options__title" htmlFor="filter-options">{title}</h4>
         <div id="filter-options" className="filter-options__options">
           {
             options.map((option, index) => {
