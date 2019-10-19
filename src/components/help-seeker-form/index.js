@@ -7,7 +7,7 @@ import './index.scss';
 
 const HelpSeekerForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formSelection, setFormSelection] = useState({step1: [], step2: [], step3: []});
+  const [formSelection, setFormSelection] = useState({});
 
   const saveSelected = (formPayload) => {
     setFormSelection({ ...formSelection, ...formPayload });
