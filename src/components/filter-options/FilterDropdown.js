@@ -10,6 +10,7 @@ const FilterDropdown = ({ title, options }) => {
 
   return(
     <div>
+      <h4>{title}</h4>
       <Select
         options={options}
         placeholder="Select from below"

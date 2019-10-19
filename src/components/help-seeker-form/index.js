@@ -27,18 +27,8 @@ const HelpSeekerForm = () => {
     default:
       return (
         <React.Fragment>
-          <h2>Other filters that might help you</h2>
-          <FormQuestionLayout title="Someone with experience with...">
-            <FilterGrid />
-          </FormQuestionLayout>
-
-          <FormQuestionLayout title="I am going to ask you another question?">
-            <FilterGrid />
-          </FormQuestionLayout>
-
-          <FormQuestionLayout title="MOAR QUESTIONS!!!!">
-            <FilterDropdown options={filterValues.situations} />
-          </FormQuestionLayout>
+          <h2>Who would you like to talk to?</h2>
+          <FilterDropdown title="Someone who has been to..." options={filterValues.countries} />
 
           <button
             className="help-seeker-form__submit"
