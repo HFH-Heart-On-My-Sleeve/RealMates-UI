@@ -16,6 +16,20 @@
     width: auto;
     height: 32px;
   }
+
+  &__overflow {
+    display: flex;
+    justify-content: space-around;
+    margin: 8px 0;
+
+    &-link {
+      margin: 8px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
 }
 
 .app-content {

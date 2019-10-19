@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +21,8 @@ import './App.scss';
 // work properly.
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Router>
       <div className="app-nav">
@@ -31,15 +33,13 @@ export default function App() {
             alt="Heart On My Sleeve Logo"
             width="250px"
           />
-          <div>
-            <p>Menu</p>
-            <div>
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/dashbboard">Home</Link>
-            </div>
-          </div>
+          <Link onClick={() => setMenuOpen(!menuOpen)}>Menu</Link>
         </div>
+      </div>
+      <div className={`app-nav__overflow${menuOpen ? '' : '--hidden'}`}>
+        <Link className="app-nav__overflow-link" to="/">Home</Link>
+        <Link className="app-nav__overflow-link" to="/about">About</Link>
+        <Link className="app-nav__overflow-link" to="/dashbboard">Dashboard</Link>
       </div>
       <div className="app-content__wrapper">
         <div className="app-content__constraint">
