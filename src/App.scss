@@ -1,6 +1,8 @@
+@import './variables.scss';
+
 .app-nav {
-  background: black;
-  color: white;
+  background: $black;
+  color: $white;
   display: flex;
   justify-content: center;
 
@@ -37,8 +39,8 @@
     &__wrapper {
       max-width: 1000px;
       padding: 16px 24px;
-      background: black;
-      color: white;
+      background: $black;
+      color: $white;
       display: flex;
       justify-content: space-between;
     }
