@@ -44,8 +44,6 @@ const SecondPage = ({ onClick }) => {
       <FilterGrid onChangeKey="feelings" onChange={updateSelected} title="Understands feeling..." options={filterValues.feelings} />
       <FilterGrid onChangeKey="situations" onChange={updateSelected} title="Has experienced situations like..." options={filterValues.situations}/>
 
-      <p>{JSON.stringify(selected)}</p>
-
       <button
         className="help-seeker-form__submit"
         onClick={() => onClick(selected)}>CONTINUE</button>
