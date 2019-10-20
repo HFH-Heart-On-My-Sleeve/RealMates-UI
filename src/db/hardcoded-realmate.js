@@ -1,4 +1,22 @@
-export const realmates = [{
+export const realmates = [
+  {
+    imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPKB5REH2-94c650e851/20191019_165328.bw_720.jpg",
+    name: "Michelle",
+    description: "Coming to terms with my infertility. ",
+    filters: ["35-50",
+      "F",
+      "Depressive Disorders",
+      "Upset","Confused","Uncertain",
+      "Family/Parenting","Loss or death",
+      "Rural",
+      "Australia",
+      "English",
+      "Certificate",
+      "Clerical and Administrative Workers",
+      "non-religious"
+    ]
+  },
+  {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPN1K4WR4-56398e8a5f/20191019_165411.bw_720.jpg",
     name: "Sachini",
     description: "The sudden loss of my husband on our first overseas holiday made me reassess my future. ",
@@ -20,9 +38,9 @@ export const realmates = [{
     ]
   },
   {
-    imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPN1K45JS-2c14e6fd80/20191019_165015.bw_720.jpg",
-    name: "Robert",
-    description: "Breast cancer took my wife after 54 beautiful years of marriage.",
+    imgUrl: "https://files.slack.com/files-pri/TP8SC75NJ-FPMMMMWK1/image_header_share_your_story.jpg",
+    name: "Matt",
+    description: "Breast cancer took my wife's life after 54 beautiful years of marriage.",
     filters: ["65+",
       "M",
       "No clinical diganosis",
@@ -68,23 +86,6 @@ export const realmates = [{
       "Degree",
       "Sales",
       "Non-religious"
-    ]
-  },
-  {
-    imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPKB5REH2-94c650e851/20191019_165328.bw_720.jpg",
-    name: "Michelle",
-    description: "Coming to terms with my infertility. ",
-    filters: ["35-50",
-      "F",
-      "Depressive Disorders",
-      "Upset","Confused","Uncertain",
-      "Family/Parenting","Loss or death",
-      "Rural",
-      "Australia",
-      "English",
-      "Certificate",
-      "Clerical and Administrative Workers",
-      "non-religious"
     ]
   },
   {

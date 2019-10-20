@@ -76,7 +76,7 @@ const SecondPage = ({ onClick }) => {
       <h2>Who would you like to talk to?</h2>
 
       <FilterGrid onChangeKey="conditions" onChange={updateSelected} title="Someone who has experience with..." options={filterValues.mentalIllnesses} />
-      <FilterGrid onChangeKey="feelings" onChange={updateSelected} title="Understands feeling..." options={filterValues.feelings} />
+      <FilterGrid onChangeKey="feelings" onChange={updateSelected} title="Understands feelings of..." options={filterValues.feelings} />
       <FilterGrid onChangeKey="situations" onChange={updateSelected} title="Has experienced situations like..." options={filterValues.situations}/>
 
       <button
