@@ -1,7 +1,7 @@
 export const realmates = [{
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPN1K4WR4-56398e8a5f/20191019_165411.bw_720.jpg",
     name: "Sachini",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "The sudden loss of my husband on our first overseas holiday made me reassess my future. ",
     filters: [
       "25-35",
       "F",
@@ -22,7 +22,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPN1K45JS-2c14e6fd80/20191019_165015.bw_720.jpg",
     name: "Robert",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "Breast cancer took my wife after 54 beautiful years of marriage.",
     filters: ["65+",
       "M",
       "No clinical diganosis",
@@ -38,7 +38,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-pri/TP8SC75NJ-FPMLLLJ5V/mitch-01.bw.jpg",
     name: "Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "My divorce nearly cost me my relationship with my children and my job. ",
     filters: [
       "35-50",
       "M",
@@ -56,7 +56,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPMLLLLMD-e385018091/20191019_165259.bw_720.jpg",
     name: "Julia",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "After 8 failed attempts I was finally able to break free from my abusive husband. ",
     filters: ["25-35",
       "F",
       "Depressive Disorders",
@@ -73,7 +73,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPKB5REH2-94c650e851/20191019_165328.bw_720.jpg",
     name: "Michelle",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "Coming to terms with my infertility. ",
     filters: ["35-50",
       "F",
       "Depressive Disorders",
@@ -90,7 +90,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FP71TTF18-443766a78f/20191019_165055_0_.bw_720.jpg",
     name: "Brenda",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "The stigma of mental health and normalisation of alcohol abuse in my community lead me to spiral internally eventually ending with a failed suicide attempt.",
     filters: ["25-35",
       "F",
       "Depressive Disorders","Anxiety Disorders","Addiction",
@@ -107,7 +107,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPKR228MT-c01a1a61ce/20191019_165130.bw_720.jpg",
     name: "Zhang",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "The pressure I placed on myself to succeed in becoming an Australian citizen lead me to a dark place.",
     filters: ["25-35",
       "M",
       "No clinical diganosis",
@@ -124,7 +124,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-pri/TP8SC75NJ-FPDBYC6Q1/20191019_165102.bw.jpg",
     name: "Anna",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "Coming out to my religious family and friends while completing my Master’s degree. ",
     filters: ["25-35",
       "F",
       "Anxiety Disorders",
@@ -141,7 +141,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-pri/TP8SC75NJ-FPMLLLJ5V/mitch-01.bw.jpg",
     name: "Mark",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "Lost my superannuation savings in an internet scam, trying to rebuild my life in my 60’s. ",
     filters: ["50-65",
       "M",
       "Depressive Disorders","Personality Disorder",
@@ -158,7 +158,7 @@ export const realmates = [{
   {
     imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FP71TTE3C-4e68095c9e/20191019_165021.bw_720.jpg",
     name: "Kiera",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus aliquam quam, non mollis risus suscipit vitae. Praesent sodales vulputate arcu sed fringilla. Curabitur a fringilla elit, quis faucibus enim. Proin ac nisl eu diam auctor tincidunt. Donec vel maximus erat, in convallis quam. Aenean auctor placerat ex nec vestibulum. Praesent convallis leo id faucibus scelerisque.",
+    description: "Breaking into the acting scene. ",
     filters: ["25-35",
       "F",
       "No clinical diganosis",
