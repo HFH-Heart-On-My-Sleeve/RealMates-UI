@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import {realmates} from '../../db';
 import MatchCard from './MatchCard';
 
 import './index.scss';
@@ -52,42 +53,7 @@ const MatchDashboard = () => {
           </Link>
         </div>
         <div className="match-dashbboard__matches">
-          <MatchCard
-            name="Matt"
-            description="I am your real mate and I am here to listen and help you make an action plan."
-            imgUrl="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-            filters={[ "Depressive disorders", "Overwhelmed", "Lost" ]}
-          />
-          <MatchCard
-            name="Matt"
-            description="I am your real mate and I am here to listen and help you make an action plan."
-            imgUrl="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-            filters={[ "Depressive disorders", "Overwhelmed", "Lost" ]}
-          />
-          <MatchCard
-            name="Matt"
-            description="I am your real mate and I am here to listen and help you make an action plan."
-            imgUrl="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-            filters={[ "Depressive disorders", "Overwhelmed", "Lost" ]}
-          />
-          <MatchCard
-            name="Matt"
-            description="I am your real mate and I am here to listen and help you make an action plan."
-            imgUrl="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-            filters={[ "Depressive disorders", "Overwhelmed", "Lost" ]}
-          />
-          <MatchCard
-            name="Matt"
-            description="I am your real mate and I am here to listen and help you make an action plan."
-            imgUrl="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-            filters={[ "Depressive disorders", "Overwhelmed", "Lost" ]}
-          />
-          <MatchCard
-            name="Matt"
-            description="I am your real mate and I am here to listen and help you make an action plan."
-            imgUrl="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-            filters={[ "Depressive disorders", "Overwhelmed", "Lost" ]}
-          />
+          { realmates.map(realmate => <MatchCard {...realmate} />) }
         </div>
       </div>
     </div>
