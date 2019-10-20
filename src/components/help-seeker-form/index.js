@@ -7,8 +7,6 @@ import * as filterValues from '../../db';
 import './index.scss';
 
 const transformToApiFormat = (payload, history) => {
-  console.log(payload);
-
   let transformed = payload;
 
   if (!!payload.locations) {
@@ -22,6 +20,12 @@ const transformToApiFormat = (payload, history) => {
   }
   if (!!payload.conditions) {
     transformed = { ...transformed, conditions: payload.conditions.map(v => v.value) }
+  }
+  if (!!payload.agerange) {
+    transformed = { ...transformed, agerange: payload.agerange.map(v => v.value) }
+  }
+  if (!!payload.languages) {
+    transformed = { ...transformed, languages: payload.languages.map(v => v.value) }
   }
 
   console.log(transformed);
@@ -97,9 +101,10 @@ const ThirdPage = ({ onClick }) => {
   return (
     <React.Fragment>
       <h2>Who would you like to talk to?</h2>
-      <FilterDropdown multi={true} onChangeKey="locations" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
-      <FilterDropdown multi={true} onChangeKey="languages" onChange={updateSelected} title="Someone who can speak..." options={filterValues.languages} />
-      <FilterDropdown multi={true} onChangeKey="agerange" onChange={updateSelected} title="Someone who is" options={filterValues.agerange} />
+
+      <FilterDropdown onChangeKey="locations" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
+      <FilterDropdown onChangeKey="languages" onChange={updateSelected} title="Someone who can speak..." options={filterValues.languages} />
+      <FilterDropdown onChangeKey="agerange" onChange={updateSelected} title="Someone who is aged between..." options={filterValues.agerange} />
 
       <button
         className="help-seeker-form__submit"

@@ -39,8 +39,10 @@ const MatchDashboard = () => {
             <div className="match-dashbboard__filter-group">
               <h5>Has these qualities:</h5>
               <div className="match-dashbboard__filter-group-tag-group">
-                { !parsedFilters.locations && <div>You have not selected any filters for this category.</div> }
-                { parsedFilters.locations ? parsedFilters.locations.map(condition => <div className="match-dashbboard__filter-group-tag">{condition}</div>) : null }
+              { !parsedFilters.locations && !parsedFilters.languages && !parsedFilters.agerange && <div>You have not selected any filters for this category.</div> }
+              { parsedFilters.locations ? parsedFilters.locations.map(condition => <div className="match-dashbboard__filter-group-tag">{condition}</div>) : null }
+              { parsedFilters.agerange ? parsedFilters.agerange.map(condition => <div className="match-dashbboard__filter-group-tag">{condition}</div>) : null }
+              { parsedFilters.languages ? parsedFilters.languages.map(condition => <div className="match-dashbboard__filter-group-tag">{condition}</div>) : null }
               </div>
             </div>
           </div>
