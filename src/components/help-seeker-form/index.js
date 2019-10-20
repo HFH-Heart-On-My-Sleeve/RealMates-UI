@@ -102,7 +102,7 @@ const ThirdPage = ({ onClick }) => {
     <React.Fragment>
       <h2>Who would you like to talk to?</h2>
 
-      <FilterDropdown onChangeKey="locations" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
+      <FilterDropdown onChangeKey="locations" onChange={updateSelected} title="Someone from.." options={filterValues.countries} />
       <FilterDropdown onChangeKey="languages" onChange={updateSelected} title="Someone who can speak..." options={filterValues.languages} />
       <FilterDropdown onChangeKey="agerange" onChange={updateSelected} title="Someone who is aged between..." options={filterValues.agerange} />
 
