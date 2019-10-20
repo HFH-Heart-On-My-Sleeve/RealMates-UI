@@ -1,18 +1,18 @@
 export const agerange = [
   {
-    start: 18,
-    end: 25
+    value: "18-25",
+    label: "18-25"
   },
   {
-    start: 25,
-    end: 35
+    value: "25-35",
+    label: "25-35"
   },
   {
-    start: 35,
-    end: 50
+    value: "35-50",
+    label: "35-50"
   },
   {
-    start: 65,
-    end: 120
+    value: "65-120",
+    label: "65-120"
   }
 ];

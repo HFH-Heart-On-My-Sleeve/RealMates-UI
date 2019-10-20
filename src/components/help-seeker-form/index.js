@@ -97,7 +97,9 @@ const ThirdPage = ({ onClick }) => {
   return (
     <React.Fragment>
       <h2>Who would you like to talk to?</h2>
-      <FilterDropdown onChangeKey="locations" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
+      <FilterDropdown multi={true} onChangeKey="locations" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
+      <FilterDropdown multi={true} onChangeKey="languages" onChange={updateSelected} title="Someone who can speak..." options={filterValues.languages} />
+      <FilterDropdown multi={true} onChangeKey="agerange" onChange={updateSelected} title="Someone who is" options={filterValues.agerange} />
 
       <button
         className="help-seeker-form__submit"
