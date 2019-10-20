@@ -37,6 +37,18 @@
     &:first-of-type {
       border-bottom: none;
     }
+
+    &-tag-group {
+      flex-wrap: wrap;
+      display: flex;
+    }
+
+    &-tag {
+      padding: 8px;
+      background: $black;
+      color: $white;
+      margin: 4px 8px 4px 0;
+    }
   }
 
   &__update {

@@ -32,7 +32,7 @@ const transformToApiFormat = (payload, history) => {
     body: JSON.stringify({id: 1234, ...transformed})
   });
 
-  // history.push('/dashboard');
+  history.push(`/dashboard?filters=${JSON.stringify(transformed)}`);
 }
 
 const HelpSeekerForm = () => {
