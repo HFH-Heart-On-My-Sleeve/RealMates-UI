@@ -38,7 +38,7 @@ export const realmates = [
     ]
   },
   {
-    imgUrl: "https://files.slack.com/files-pri/TP8SC75NJ-FPMMMMWK1/image_header_share_your_story.jpg",
+    imgUrl: "https://files.slack.com/files-tmb/TP8SC75NJ-FPN1K45JS-2c14e6fd80/20191019_165015.bw_720.jpg",
     name: "Matt",
     description: "Breast cancer took my wife's life after 54 beautiful years of marriage.",
     filters: ["65+",
