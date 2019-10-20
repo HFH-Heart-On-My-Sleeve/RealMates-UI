@@ -6,7 +6,37 @@ import * as filterValues from '../../db';
 
 import './index.scss';
 
+const transformToApiFormat = (payload, history) => {
+  console.log(payload);
+
+  let transformed = payload;
+
+  if (!!payload.locations) {
+    transformed = { ...transformed, locations: payload.locations.map(v => v.value) }
+  }
+  if (!!payload.feelings) {
+    transformed = { ...transformed, feelings: payload.feelings.map(v => v.value) }
+  }
+  if (!!payload.situations) {
+    transformed = { ...transformed, situations: payload.situations.map(v => v.value) }
+  }
+  if (!!payload.conditions) {
+    transformed = { ...transformed, conditions: payload.conditions.map(v => v.value) }
+  }
+
+  console.log(transformed);
+  fetch('https://2nc5so42ga.execute-api.ap-southeast-2.amazonaws.com/devrealmate/seeker', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    mode: 'cors',
+    body: JSON.stringify({id: 1234, ...transformed})
+  });
+
+  // history.push('/dashboard');
+}
+
 const HelpSeekerForm = () => {
+  const history = useHistory();
   const [currentStep, setCurrentStep] = useState(1);
   const [formSelection, setFormSelection] = useState({});
 
@@ -21,7 +51,7 @@ const HelpSeekerForm = () => {
     case 2:
       return <SecondPage onClick={saveSelected} />;
     default:
-      return <ThirdPage onClick={(selected) => console.log({...formSelection, ...selected})} />;
+      return <ThirdPage onClick={(selected) => transformToApiFormat({...formSelection, ...selected}, history)} />;
   }
 };
 
@@ -41,7 +71,7 @@ const SecondPage = ({ onClick }) => {
     <React.Fragment>
       <h2>Who would you like to talk to?</h2>
 
-      <FilterGrid onChangeKey="experience" onChange={updateSelected} title="Someone who has experience with..." options={filterValues.mentalIllnesses} />
+      <FilterGrid onChangeKey="conditions" onChange={updateSelected} title="Someone who has experience with..." options={filterValues.mentalIllnesses} />
       <FilterGrid onChangeKey="feelings" onChange={updateSelected} title="Understands feeling..." options={filterValues.feelings} />
       <FilterGrid onChangeKey="situations" onChange={updateSelected} title="Has experienced situations like..." options={filterValues.situations}/>
 
@@ -53,7 +83,6 @@ const SecondPage = ({ onClick }) => {
 };
 
 const ThirdPage = ({ onClick }) => {
-  const history = useHistory();
   const [selected, setSelected] = useState({});
   const updateSelected = (newKey, option) => {
       if (selected.hasOwnProperty(newKey)) {
@@ -68,14 +97,11 @@ const ThirdPage = ({ onClick }) => {
   return (
     <React.Fragment>
       <h2>Who would you like to talk to?</h2>
-      <FilterDropdown onChangeKey="country" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
+      <FilterDropdown onChangeKey="locations" onChange={updateSelected} title="Someone who has been to..." options={filterValues.countries} />
 
       <button
         className="help-seeker-form__submit"
-        onClick={() => {
-          onClick(selected);
-          history.push("/dashboard");
-        }}>SUBMIT</button>
+        onClick={() => onClick(selected)}>SUBMIT</button>
     </React.Fragment>
   );
 }
